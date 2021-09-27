@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Countries</title>
+</head>
+
+<body>
+	Welcome! This is the list of countries and there population.
+	<br>
+	<br>
+<table>
+		<tr> Country Population</tr>
+		<tr th:each="country : ${countries}">
+		<td>
+			<a th:text ="${country.name}" th:href="@{/info/{name}(name=${country.name})}"> Name</a>
+		</td>
+		<td> <a th:href= "@{/edit/{name}(name=${country.name})}"> Edit</a></td>
+	</tr>
+
+</table>
+<p><a th:href="@{/add}">Add A Country</a></p>  
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+create Spring boot application with mongodb.
+[ create at least one java bean, repo, one service ]
+you have to use either hibernate/JPA with mongodb.
+
+you have to add required dependency/jar for mongodb for spring/boot.
+
+make CRUD operations on objects , test those operations using junit test class.

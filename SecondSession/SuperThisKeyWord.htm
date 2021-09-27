@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/tms/Content/bootstrap.min.css" rel="stylesheet"/>
+<link href="/tms/Content/login.css" rel="stylesheet"/>
+<link href="/tms/Content/plugins.min.css" rel="stylesheet"/>
+<link href="/tms/Content/responsive.css" rel="stylesheet"/>
+<link href="/tms/Content/style.css" rel="stylesheet"/>
+<link href="/tms/Content/theme_style.css" rel="stylesheet"/>
+
+    <script src="/tms/Scripts/modernizr-2.6.2.js"></script>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Responsive Admin Template" />
+    <meta name="author" content="TMS" />
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <style>
+        #MessageModal {
+                position: absolute;
+    width: 23%;
+    margin: 0 auto;
+    top: 10%;
+    z-index: 9;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%) !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="MessageModal" style="display:none;">
+        <div id="divAlert">
+            <i></i><p><b id="TxtHeaderMessageModal"></b> &nbsp; <span id="TxtMessageModal"></span></p>
+        </div>
+    </div>
+    <div class="login-form text-center">
+        <div></div>
+        <div class="form formLogin">
+            <div class="page-content" style="min-height:0px; padding:0px">
+                
+            </div>
+            
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<form action="/tms/?Length=4" data-ajax="true" data-ajax-method="POST" enctype="multipart/form-data" id="FileForm" method="post">    <div>
+        <img width="200" src="/tms/images/logo.png" />
+    </div>
+    <br />
+    <h2>Login to your account</h2>
+<input name="__RequestVerificationToken" type="hidden" value="TuFucJQSS0nQYPlLOz-suT1Ix9D0KuAADr4BNxem7Sj-92UopUW96h6k6l2UkXN4klf5UGcmNPBN6UBYPOYvytP9tf3f9qb2zy0DJmvDzWU1" /><span class="field-validation-valid field-validation-error" data-valmsg-for="username" data-valmsg-replace="true"></span><input class="form-control" data-val="true" data-val-required="Provide Username." id="txtUsername" name="username" placeholder="Username" type="text" value="" /><span class="field-validation-valid field-validation-error" data-valmsg-for="password" data-valmsg-replace="true"></span><input class="form-control" data-val="true" data-val-required="Provide Password." id="txtPassword" name="password" placeholder="Password" type="password" value="" />    <div class="remember text-left" style="margin-left:20px;">
+        <div class="checkbox checkbox-primary">
+            <input data-val="true" data-val-required="The Remember field is required." id="checkbox2" name="Remember" type="checkbox" value="true" /><input name="Remember" type="hidden" value="false" />
+            
+            <label for="checkbox2" style="line-height:20px;">
+                Remember me
+            </label>
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+    <div class="forgetPassword">
+        
+        <a href="/tms/Home/ForgotPassword">Forgot Password?</a>&nbsp;<i class="fa fa-question-circle"></i>
+    </div>
+</form>
+<script src="/tms/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+      $("#MessageModal").hide();
+        var MsgSuccess = '';
+        if (MsgSuccess != "" && MsgSuccess != null) {
+           var color = '';
+
+            if (color == "red") {
+                $('#TxtHeaderMessageModal').html('Error!');
+                $('#divAlert').removeClass("alert-success");
+                $('#divAlert').addClass("alert-danger");
+            }
+            else {
+
+                $('#TxtHeaderMessageModal').html('Success!');
+                $('#divAlert').removeClass("alert-danger");
+                $('#divAlert').addClass("alert-success");
+            }
+            $('#TxtMessageModal').html(MsgSuccess);
+            $("#MessageModal").show();
+            $("#MessageModal").fadeTo(8000, 500).fadeOut(2000);
+        }
+
+    });
+</script>
+
+        </div>
+    </div>
+
+    <script src="/tms/Scripts/jquery-1.11.0.js"></script>
+
+    <script src="/tms/Scripts/bootstrap.min.js"></script>
+<script src="/tms/Scripts/respond.js"></script>
+
+    
+
+    <script>
+                    $(function () {
+                        $('body').on('click', '.modal-link', function (e) {
+                            e.preventDefault();
+                            $(this).attr('data-target', '#modal-container');
+                            $(this).attr('data-toggle', 'modal');
+                        });
+                        $('body').on('click', '.modal-Confirmlink', function (e) {
+                            e.preventDefault();
+                            $(this).attr('data-target', '#modal-Confirmcontainer');
+                            $(this).attr('data-toggle', 'modal');
+                        });
+                        // Attach listener to .modal-close-btn's so that when the button is pressed the modal dialog disappears
+
+
+                        $('body').on('click', '.modal-close-btn', function () {
+                            $('#modal-container').modal('hide');
+                        });
+
+                        //clear modal cache, so that new content can be loaded
+                        $('#modal-container').on('hidden.bs.modal', function () {
+                            $(this).removeData('bs.modal');
+                        });
+
+                        $('#modal-Confirmcontainer').on('hidden.bs.modal', function () {
+                            $(this).removeData('bs.modal');
+                        });
+
+                        $('#CancelModal').on('click', function () {
+                            return false;
+                        });
+                    });
+    </script>
+</body>
+</html>

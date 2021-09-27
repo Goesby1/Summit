@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="demoSpringDI/.mvn/wrapper"/>
+	<classpathentry kind="src" path="demoSpringDI/src/main/java"/>
+	<classpathentry kind="src" path="demoSpringDI/src/test/java"/>
+	<classpathentry kind="src" path="dependency-injection/.mvn/wrapper"/>
+	<classpathentry kind="src" path="dependency-injection/src/main/java"/>
+	<classpathentry kind="src" path="dependency-injection/src/test/java"/>
+	<classpathentry kind="src" path="spring-core/src/main/java"/>
+	<classpathentry kind="lib" path="demoSpringDI/target/demoSpringDI-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="demoSpringDI/target/classes"/>
+</classpath>
